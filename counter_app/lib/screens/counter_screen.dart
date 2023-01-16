@@ -83,7 +83,7 @@ class CustomFloatingButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children:  [
+      children: [
         FloatingActionButton(
           onPressed: () => incrementarFN(),
           child: const Icon(Icons.add),
@@ -93,12 +93,12 @@ class CustomFloatingButtons extends StatelessWidget {
           child: const Icon(Icons.replay_outlined),
         ),
         FloatingActionButton(
-          onPressed:() => incrementar100FN(),
+          onPressed: () => incrementar100FN(),
           child: const Text("+ 100"),
         ),
         FloatingActionButton(
           onPressed: () => restarFN(),
-          child:const Icon(Icons.remove),
+          child: const Icon(Icons.remove),
         )
       ],
     );
