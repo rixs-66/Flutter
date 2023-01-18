@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/custom_text_field.dart';
 
 class InputsScreen extends StatelessWidget {
   const InputsScreen({Key? key}) : super(key: key);
@@ -13,15 +14,7 @@ class InputsScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Column(
-            children: [
-              TextFormField(
-                autofocus: true,
-                initialValue: 'ricardo Pineda',
-                onChanged: (value) {
-                  print(value);
-                },
-              )
-            ],
+            children: const [CustomTextField()],
           ),
         ),
       ),
