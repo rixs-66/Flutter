@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
+  final String? hintText;
+  final String? labelText;
+  final String? helperText;
+  final String? counterText;
+  final IconData? icon;
+  final IconData? suffixIcon;
+  final TextInputType? keyboardType;
+  final bool status;
+
   const CustomTextField({
     Key? key,
+    this.hintText,
+    this.labelText,
+    this.helperText,
+    this.counterText,
+    this.icon,
+    this.suffixIcon,
+    this.keyboardType,
+    this.status = false,
   }) : super(key: key);
 
   @override
@@ -10,6 +27,8 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       autofocus: false,
       initialValue: '',
+      keyboardType: keyboardType,
+      obscureText: status,
       onChanged: (value) {
         print(value);
       },
@@ -18,13 +37,12 @@ class CustomTextField extends StatelessWidget {
         return value.length < 3 ? 'Minimo de 3 leras' : null;
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      decoration: const InputDecoration(
-        hintText: 'nombre de usuario',
-        labelText: 'Nombre',
-        helperText: 'solo letras',
-        counterText: '3 caracteres',
-        suffixIcon: Icon(Icons.supervised_user_circle),
-        prefixIcon: Icon(Icons.person),
+      decoration: InputDecoration(
+        hintText: hintText,
+        labelText: labelText,
+        helperText: helperText,
+        suffixIcon: suffixIcon == null ? null : Icon(suffixIcon),
+        prefixIcon: icon == null ? null : Icon(icon),
       ),
     );
   }
