@@ -9,6 +9,8 @@ class CustomTextField extends StatelessWidget {
   final IconData? suffixIcon;
   final TextInputType? keyboardType;
   final bool status;
+  final String fromProperty;
+  final Map<String, String> formvValues;
 
   const CustomTextField({
     Key? key,
@@ -20,6 +22,8 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.keyboardType,
     this.status = false,
+    required this.fromProperty,
+    required this.formvValues,
   }) : super(key: key);
 
   @override
@@ -30,7 +34,7 @@ class CustomTextField extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: status,
       onChanged: (value) {
-        print(value);
+        formvValues[fromProperty] = value;
       },
       validator: (value) {
         if (value == null) return 'Este campo es requerido';

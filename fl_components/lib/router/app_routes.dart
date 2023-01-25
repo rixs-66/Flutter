@@ -37,7 +37,7 @@ class AppRoutes {
         name: 'circle avatar',
         screen: const AvatarScreen()),
     MenuOptions(
-        route: 'avatar',
+        route: 'animated',
         icono: Icons.animation,
         name: 'animated screen',
         screen: const AnimatedScreen()),
@@ -45,7 +45,12 @@ class AppRoutes {
         route: 'Inputs',
         icono: Icons.input_outlined,
         name: 'Inputs screen',
-        screen: const InputsScreen())
+        screen: const InputsScreen()),
+    MenuOptions(
+        route: 'Slider',
+        icono: Icons.format_line_spacing,
+        name: 'Slider screen',
+        screen: const SliderScreen())
   ];
 
   /* static Map<String, Widget Function(BuildContext)> routes = {
