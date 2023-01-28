@@ -50,7 +50,12 @@ class AppRoutes {
         route: 'Slider',
         icono: Icons.format_line_spacing,
         name: 'Slider screen',
-        screen: const SliderScreen())
+        screen: const SliderScreen()),
+    MenuOptions(
+        route: 'ListviewBuilder',
+        icono: Icons.build_circle_outlined,
+        name: 'Infinity scroll & pull to refresh',
+        screen: const ListviewBuilderScreen())
   ];
 
   /* static Map<String, Widget Function(BuildContext)> routes = {
